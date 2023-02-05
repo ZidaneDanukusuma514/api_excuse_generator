@@ -7,8 +7,8 @@ export const useStore = create<Storestate>((set) => ({
   Data: [
     {
       id: 416,
-      excuse: "There will be a zombie apocalypse tomorrow, I need to rest.",
-      category: "party",
+      excuse: "Excuse me........",
+      category: "category",
     },
   ],
   insertData: (parameter) => {
@@ -23,7 +23,11 @@ export const useStore = create<Storestate>((set) => ({
     axios
       .get(`https://excuser-three.vercel.app/v1/excuse/${mode}/`)
       .then((response) => {
-        console.log(response.data);
+        console.log(...response.data);
+
+        set(() => ({
+          Data: [...response.data],
+        }));
       });
   },
 }));
