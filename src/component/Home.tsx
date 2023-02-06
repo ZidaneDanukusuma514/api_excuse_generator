@@ -7,7 +7,7 @@ export interface IHomeProps {}
 export default function Home(props: IHomeProps) {
   const { getData, Data } = useStore();
   const buttonStyled =
-    "text-sm md:text-md truncate  p-4 bg-transparent capitalize hover:bg-slate-200 hover:text-black border-2 rounded-xl font-bold";
+    "text-sm md:text-md truncate p-4 bg-transparent capitalize hover:bg-slate-200 hover:text-black border-2 rounded-xl font-bold";
   return (
     <div className="w-[50%] mx-auto">
       <div className="flex flex-col space-y-8 mt-8">

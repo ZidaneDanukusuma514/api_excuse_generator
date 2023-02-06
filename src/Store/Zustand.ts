@@ -18,8 +18,6 @@ export const useStore = create<Storestate>((set) => ({
   },
 
   getData: (mode) => {
-    console.log(mode);
-
     axios
       .get(`https://excuser-three.vercel.app/v1/excuse/${mode}/`)
       .then((response) => {

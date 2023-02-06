@@ -1,0 +1,12 @@
+.moving {
+  animation: slide 2s;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
