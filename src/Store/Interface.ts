@@ -4,16 +4,8 @@ export type DataType = {
   category: string;
 };
 
-export enum Mode {
-  family = "family",
-  office = "office",
-  children = "children",
-  college = "college",
-  party = "party",
-  funny = "funny",
-  unbelievable = "unbelievable",
-  developers = "developers",
-  gaming = "gaming",
+export interface Mode {
+  mode: string;
 }
 
 export interface CategoryInt {
@@ -22,8 +14,7 @@ export interface CategoryInt {
 
 export interface Storestate {
   value: string;
-  Data: DataType[];
+  Data?: DataType;
   Category: CategoryInt[];
-  insertData: (parameter: DataType) => void;
-  getData: (mode: Mode) => void;
+  getData: (mode: string) => void;
 }

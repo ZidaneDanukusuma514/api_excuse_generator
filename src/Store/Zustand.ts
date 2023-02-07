@@ -4,18 +4,7 @@ import { Storestate } from "./Interface";
 
 export const useStore = create<Storestate>((set) => ({
   value: "This is zustand value",
-  Data: [
-    {
-      id: 416,
-      excuse: "Excuse me........",
-      category: "category",
-    },
-  ],
-  insertData: (parameter) => {
-    set((state) => ({
-      Data: [...state.Data, parameter],
-    }));
-  },
+
   Category: [
     { mode: "family" },
     { mode: "office" },
@@ -27,14 +16,15 @@ export const useStore = create<Storestate>((set) => ({
     { mode: "developers" },
     { mode: "gaming" },
   ],
+
   getData: (mode) => {
     axios
       .get(`https://excuser-three.vercel.app/v1/excuse/${mode}/`)
       .then((response) => {
-        console.log(...response.data);
+        const result = response.data;
 
         set(() => ({
-          Data: [...response.data],
+          Data: result[0],
         }));
       });
   },
