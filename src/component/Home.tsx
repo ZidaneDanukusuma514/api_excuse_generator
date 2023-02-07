@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Mode } from "../Store/Interface";
 import { useStore } from "../Store/Zustand";
-
+import Style from "./Home.module.css";
 export interface IHomeProps {}
 
 export default function Home(props: IHomeProps) {
-  const { getData, Data } = useStore();
+  const { getData, Data, Category } = useStore();
   const buttonStyled =
     "text-sm md:text-md truncate p-4 bg-transparent capitalize hover:bg-slate-200 hover:text-black border-2 rounded-xl font-bold";
   return (
@@ -14,7 +14,9 @@ export default function Home(props: IHomeProps) {
         <h1 className="text-lg text-center font-bold font-mono">
           Home of course
         </h1>
-        <div className="flex space-x-2 items-center bg-slate-200 border-2 rounded-md p-4">
+        <div
+          className={`${Style.borderrainbow} flex space-x-2 items-center bg-slate-200 border-2 rounded-md p-4`}
+        >
           <p className="grow border-r-4 border-slate-800/75  text-black text-sm lg:text-lg font-semibold">
             {Data[0].excuse}
           </p>

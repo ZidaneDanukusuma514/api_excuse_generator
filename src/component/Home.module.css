@@ -1,0 +1,14 @@
+.borderrainbow:hover {
+  border: 3px;
+  border-style: solid;
+  animation: rainbow 2s infinite alternate;
+}
+
+@keyframes rainbow {
+  from {
+    border-color: red;
+  }
+  to {
+    border-color: green;
+  }
+}

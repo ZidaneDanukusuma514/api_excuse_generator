@@ -1,0 +1,14 @@
+.moving {
+}
+.moving:hover {
+  animation: slide 2s infinite alternate;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}

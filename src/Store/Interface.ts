@@ -16,9 +16,14 @@ export enum Mode {
   gaming = "gaming",
 }
 
+export interface CategoryInt {
+  mode: string;
+}
+
 export interface Storestate {
   value: string;
   Data: DataType[];
+  Category: CategoryInt[];
   insertData: (parameter: DataType) => void;
   getData: (mode: Mode) => void;
 }

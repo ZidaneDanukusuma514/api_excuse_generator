@@ -16,7 +16,17 @@ export const useStore = create<Storestate>((set) => ({
       Data: [...state.Data, parameter],
     }));
   },
-
+  Category: [
+    { mode: "family" },
+    { mode: "office" },
+    { mode: "children" },
+    { mode: "college" },
+    { mode: "party" },
+    { mode: "funny" },
+    { mode: "unbelievable" },
+    { mode: "developers" },
+    { mode: "gaming" },
+  ],
   getData: (mode) => {
     axios
       .get(`https://excuser-three.vercel.app/v1/excuse/${mode}/`)
