@@ -28,50 +28,6 @@ export default function Home(props: IHomeProps) {
           {Category.map((item, index) => (
             <Button key={index} text={item.mode} category={item.mode} />
           ))}
-
-          {/* <button className={buttonStyled} onClick={() => getData(Mode.family)}>
-            Family
-          </button>
-
-          <button className={buttonStyled} onClick={() => getData(Mode.office)}>
-            Office
-          </button>
-
-          <button
-            className={buttonStyled}
-            onClick={() => getData(Mode.children)}
-          >
-            children
-          </button>
-          <button
-            className={buttonStyled}
-            onClick={() => getData(Mode.college)}
-          >
-            college
-          </button>
-          <button className={buttonStyled} onClick={() => getData(Mode.party)}>
-            party
-          </button>
-          <button className={buttonStyled} onClick={() => getData(Mode.funny)}>
-            funny
-          </button>
-
-          <button
-            className={buttonStyled}
-            onClick={() => getData(Mode.unbelievable)}
-          >
-            unbeliveble
-          </button>
-
-          <button
-            className={buttonStyled}
-            onClick={() => getData(Mode.developers)}
-          >
-            developers
-          </button>
-          <button className={buttonStyled} onClick={() => getData(Mode.gaming)}>
-            gaming
-          </button> */}
         </div>
       </div>
     </div>

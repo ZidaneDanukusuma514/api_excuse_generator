@@ -1,7 +1,5 @@
 .moving {
-}
-.moving:hover {
-  animation: slide 2s infinite alternate;
+  animation: slide 2s;
 }
 
 @keyframes slide {
